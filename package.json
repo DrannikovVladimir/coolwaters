@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,20 @@
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.22.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3"
   }
