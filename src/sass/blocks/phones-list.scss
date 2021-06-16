@@ -1,0 +1,29 @@
+.phones-list {
+  width: 165px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.phones-list__link {
+  font-weight: 600;
+
+  color: $title-color;
+}
+
+@media (max-width: 500px) {
+  .phones-list {
+    width: auto;
+
+  }
+
+  .phones-list__item {
+    line-height: 18px;
+  }
+
+  .phones-list__link {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

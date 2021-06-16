@@ -1,0 +1,38 @@
+.nav-list {
+  width: 532px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-list__link {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  color: $text-color;
+  line-height: 23px;
+
+  &:hover {
+    border-bottom-color: $button-color;
+  }
+
+  &:active {
+    color: $button-color;
+  }
+}
+
+@media (max-width: 1440px) {
+  .nav-list {
+    width: 430px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-list {
+    display: none;
+    order: 2;
+  }
+}

@@ -1,0 +1,32 @@
+.column-header {
+  background-color: $bg-color;
+  background-image: url(../../img/bg-main.png);
+  background-repeat: no-repeat;
+  background-position: left -600px center;
+  background-size: 1440px;
+}
+
+.column-header__container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 120px;
+}
+
+@media (max-width: 1440px) {
+  .column-header__container {
+    width: 1260px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .column-header__container {
+    width: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .column-header__container {
+    padding-left: 0;
+  }
+}

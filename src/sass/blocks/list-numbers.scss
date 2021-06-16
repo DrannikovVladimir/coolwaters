@@ -1,0 +1,55 @@
+.list-numbers {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.list-numbers__title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 75px;
+  color: $accent-color;
+}
+
+.list-numbers__subtitle {
+  max-width: 150px;
+  margin: 0;
+  margin: 0;
+}
+
+@media (max-width: 1115px) {
+  .list-numbers {
+    width: 500px;
+  }
+
+  .list-numbers__subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 620px) {
+  .list-numbers {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 360px) {
+  .list-numbers__item {
+    max-width: 140px;
+  }
+
+  .list-numbers__title {
+    font-size: 35px;
+    line-height: 55px;
+  }
+}

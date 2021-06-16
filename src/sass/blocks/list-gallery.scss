@@ -1,0 +1,24 @@
+.list-gallery {
+  width: 6200px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.list-gallery__item {
+  margin-right: 5px;
+}
+
+@media (max-width: 860px) {
+  .list-gallery__image {
+    width: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .list-gallery__image {
+    width: 250px;
+  }
+}

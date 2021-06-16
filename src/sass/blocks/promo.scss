@@ -1,0 +1,129 @@
+.promo {
+  background-color: $bg-color;
+  background-image: url('../../img/bottle.png');
+  background-repeat: no-repeat;
+  background-position: left 600px center;
+  background-size: 513px 635px;
+}
+
+.promo__container {
+  width: 1240px;
+  padding-top: 140px;
+  padding-right: 50px;
+  padding-bottom: 90px;
+  padding-left: 105px;
+}
+
+.promo__text {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  line-height: 21px;
+}
+
+.promo__title {
+  width: 385px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-family: 'Arkhip', 'Georgia', 'Palatino', serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: $title-color;
+}
+
+.promo__subtitle {
+  width: 385px;
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@media (max-width: 1440px) {
+  .promo {
+    background-size: 450px auto;
+    background-position: left 500px center;
+  }
+
+  .promo__container {
+    width: 1060px;
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .promo__container {
+    width: auto;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .promo {
+    background-size: 400px auto;
+    background-position: left 450px center;
+  }
+}
+
+@media (max-width: 950px) {
+  .promo {
+    background-size: 350px auto;
+    background-position: left 400px center;
+  }
+
+  .promo__title {
+    width: 345px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .promo__subtitle {
+    margin-bottom: 50px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 550px) {
+  .promo {
+    background-image: none;
+  }
+
+  .promo__container {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+  }
+
+  .promo__link-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .promo__title {
+    width: auto;
+    max-width: 345px;
+  }
+
+  .promo__subtitle {
+    width: auto;
+    max-width: 365px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .promo__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
