@@ -1,0 +1,221 @@
+.form-water__group {
+  display: flex;
+  margin-bottom: 40px;
+
+  &--total {
+    align-items: flex-end;
+  }
+}
+
+.form-water__input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--left {
+    width: 180px;
+    margin-right: 25px;
+  }
+
+  &--right {
+    width: 205px;
+  }
+
+  &--equipment {
+    flex-direction: row;
+  }
+}
+
+.form-water__label {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form-water__input {
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #636363;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  &--select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: $basic-color;
+    background-image: url('../../img/icon-select.svg');
+    background-repeat: no-repeat;
+    background-size: 10px auto;
+    background-position: right 20px center;
+    outline: 0;
+  }
+}
+
+.form-water__button-quantity-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+}
+
+.form-water__quantity {
+  margin: 0;
+
+  font-size: 25px;
+  line-height: 41px;
+  color: $title-color;
+}
+
+.form-water__button-quantity {
+  position: relative;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #636363;
+  border-radius: 50%;
+
+  color: $button-color;
+
+  background-color: $basic-color;
+
+  &--minus {
+
+    &::before {
+      content: '-';
+    }
+  }
+
+  &--plus {
+
+    &::before {
+      content: '+';
+
+      position: absolute;
+      top: 2px;
+      left: 7px;
+    }
+  }
+}
+
+.form-water__input-wrapper-group {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form-water__label-equipment {
+  position: relative;
+  padding-left: 25px;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+    border: 1px solid #636363;
+
+    background-color: $basic-color;
+  }
+}
+
+.form-water__input-equipment:checked + .form-water__label-equipment {
+
+  &::before {
+    background-image: url('../../img/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 6px;
+  }
+}
+
+.form-water__input-equipment:hover + .form-water__label-equipment,
+.form-water__input-equipment:focus + .form-water__label-equipment {
+
+  &::before {
+    border: 2px solid $title-color;
+  }
+}
+
+.form-water__total-wrapper {
+  margin-right: auto;
+}
+
+.form-water__total {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form-water__total-number {
+  display: block;
+
+  color: $title-color;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.form-water__button {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+::-webkit-datetime-edit-year-field {
+  font-weight: bold;
+}
+
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field {
+  color: #636363;
+}
+
+::-ms-expand {
+  padding-right: 20px;
+}
+
+@media (max-width: 550px) {
+  .form-water__group {
+    flex-direction: column;
+  }
+
+  .form-water__input-wrapper {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    &--equipment {
+      flex-direction: column;
+    }
+  }
+
+  .form-water__group {
+    margin-bottom: 0;
+
+    &--quantity {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--total {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

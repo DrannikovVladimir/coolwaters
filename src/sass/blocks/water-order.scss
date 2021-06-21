@@ -1,0 +1,135 @@
+.water-order {
+  background-color: $bg-color;
+  background-image: url('../../img/bg-main.png');
+  background-repeat: no-repeat;
+  background-position: left -400px center;
+  background-size: contain;
+}
+
+.water-order__container-right {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  padding-top: 150px;
+  padding-bottom: 120px;
+  padding-left: 90px;
+
+  background-color: $bg-color;
+  background-image: url('../../img/bottle-form.png');
+  background-repeat: no-repeat;
+  background-position: left 46% center;
+  background-size: 202px 386px;
+}
+
+.water-order__container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 1440px;
+}
+
+.water-order__title {
+  width: 350px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  font-family: 'Arkhip', 'Georgia', 'Palatino', serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: $title-color;
+}
+
+.water-order__subtitle {
+  width: 270px;
+}
+
+@media (max-width: 1440px) {
+  .water-order__container {
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 1240px;
+  }
+
+  .water-order__container-right {
+    width: 1060px;
+    padding-left: 60px;
+
+    background-size: 160px auto;
+  }
+}
+
+@media (max-width: 1240px) {
+  .water-order__container {
+    width: 940px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .water-order__container-right {
+    width: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: $bg-color;
+    background-image: url('../../img/bottle-form.png');
+    background-repeat: no-repeat;
+    background-position: left 35% bottom 130px;
+    background-size: 110px auto;
+  }
+
+  .water-order__title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 960px) {
+  .water-order {
+    background-position: left -800px center;
+    background-size: cover;
+  }
+
+  .water-order__container {
+    justify-content: center;
+    width: auto;
+  }
+
+  .water-order__container-right {
+    flex-direction: column;
+
+    background-image: none;
+  }
+
+  .water-order__title {
+    width: auto;
+    max-width: 320px;
+  }
+
+  .water-order__subtitle {
+    width: auto;
+    max-width: 320px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .water-order {
+    background-image: none;
+  }
+
+  .water-order__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .water-order__container-right {
+    padding-left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

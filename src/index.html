@@ -130,6 +130,141 @@
         </div>
       </section>
 
+      <section class="produces">
+        <div class="produces__container">
+          <h2 class="produces__title">Наша продукция</h2>
+          <ul class="produces__list produces-list">
+            <li class="produces-list__item produces-list__item--juice">
+              <div class="produces-list__image-wrapper">
+                <img src="./img/produce1.jpg" alt="Соки" class="produces-list__image" width="139" height="310">
+              </div>
+              <h3 class="produces-list__title">Сокосодержащие напитки и холодные чаи</h3>
+              <p class="produces-list__text">Cодержание натурального сока около 10%. Холодный чай отлично уталяет жажду в любое время года, а детское шампанское станет прекрасным украшением на любых праздниках.</p>
+            </li>
+            <li class="produces-list__item">
+              <div class="produces-list__image-wrapper">
+                <img src="./img/produce3.jpg" alt="Лимонады" class="produces-list__image" width="149" height="312">
+              </div>
+              <h3 class="produces-list__title">Лимонады, Cool Cola, Байкал и т.п</h3>
+              <p class="produces-list__text">Огромный выбор лимонадов, которые уже давно стали классикой такие как Тархун, Дюшес, Буратино, Лимонад и много, много других напитков.</p>
+            </li>
+            <li class="produces-list__item">
+              <div class="produces-list__image-wrapper">
+                <img src="./img/produce2.jpg" alt="Вода" class="produces-list__image" width="161" height="309">
+              </div>
+              <h3 class="produces-list__title">Газированная и&nbsp;негазированная вода</h3>
+              <p class="produces-list__text">Питьевая артезианская вода торговой марки “Cool Waters” в&nbsp;ёмкостях 0.5, 1.0, 1.5, 2.0 и 5 литров.</p>
+            </li>
+          </ul>
+          <div class="produces__button-wrapper">
+            <button class="produces__button btn">Вся продукция</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="water-order">
+        <div class="water-order__container">
+          <div class="water-order__container-right">
+            <div class="water-order__title-wrapper">
+              <h2 class="water-order__title">заказать воду на дом или офис 19&nbsp;литров</h2>
+              <p class="water-order__subtitle">Доставка воды: Караганда, Темиртау, Абай, Сарань, Шахтинск, Шахан, Актас</p>
+            </div>
+            <div class="water-order__form-wrapper">
+              <form action="" class="water-order__form form-water">
+                <div class="form-water__group">
+                  <div class="form-water__input-wrapper form-water__input-wrapper--left">
+                    <label for="city" class="form-water__label">Город</label>
+                    <!-- <input id="city" type="text" name="city" class="form-water__input" placeholder="г.Караганда"> -->
+                    <select id="city" name="city" class="form-water__input form-water__input--select" size="1">
+                      <option value="Karaganda" selected>Караганда</option>
+                      <option value="Temirtau">Темиртау</option>
+                      <option value="Abay">Абай</option>
+                      <option value="Saran">Сарань</option>
+                      <option value="Shahtinsk">Шахтинск</option>
+                      <option value="Shahan">Шахан</option>
+                      <option value="Aktas">Актас</option>
+                    </select>
+                  </div>
+                  <div class="form-water__input-wrapper form-water__input-wrapper--right">
+                    <label for="address" class="form-water__label">Улица, дом</label>
+                    <input id="address" type="text" name="address" class="form-water__input" placeholder="ул.Абая 1, кв.1">
+                  </div>
+                </div>
+                <div class="form-water__group">
+                  <div class="form-water__input-wrapper form-water__input-wrapper--left">
+                    <label for="date" class="form-water__label">Дата поставки</label>
+                    <input id="date" type="date" name="date" class="form-water__input">
+                  </div>
+                  <div class="form-water__input-wrapper form-water__input-wrapper--right">
+                    <label for="phone" class="form-water__label">Телефон</label>
+                    <input id="phone" type="tel" name="phone" class="form-water__input" placeholder="+7(___)___-__-__">
+                  </div>
+                </div>
+                <div class="form-water__group form-water__group--quantity">
+                  <div class="form-water__input-wrapper form-water__input-wrapper--left">
+                    <p class="form-water__label">Кол-во шт.</p>
+                    <div class="form-water__button-quantity-wrapper">
+                      <button class="form-water__button-quantity form-water__button-quantity--minus" type="button">
+                        <span class="visually-hidden">минус</span>
+                      </button>
+                      <p class="form-water__quantity">1</p>
+                      <button class="form-water__button-quantity form-water__button-quantity--plus" type="button">
+                        <span class="visually-hidden">плюс</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form-water__input-wrapper form-water__input-wrapper--right">
+                    <p class="form-water__label">Доп.оборудование</p>
+                    <div class="form-water__input-wrapper form-water__input-wrapper--equipment">
+                      <div class="form-water__input-wrapper-group">
+                        <input id="pompa" type="checkbox" name="pompa" class="form-water__input-equipment visually-hidden">
+                        <label for="pompa" class="form-water__label-equipment">Помпа</label>
+                      </div>
+                      <div class="form-water__input-wrapper-group">
+                        <input id="cooler" type="checkbox" name="cooler" class="form-water__input-equipment visually-hidden">
+                        <label for="cooler" class="form-water__label-equipment">Диспенсер</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-water__group form-water__group--total">
+                  <div class="form-water__total-wrapper">
+                    <p class="form-water__total">Итого:<span class="form-water__total-number">500 тг.</span></p>
+                  </div>
+                  <button class="form-water__button btn">Оформить заказ</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="equipment equipment__container">
+        <h2 class="equipment__title">Сопутствующее оборудование</h2>
+        <ul class="equipment__list equipment-list">
+          <li class="equipment-list__item">
+            <div class="equipment-list__image-wrapper">
+              <img src="./img/equipment1.jpg" alt="Подставка" class="equipment-list__image" width="164" height="166">
+            </div>
+            <h3 class="equipment-list__title">Подставки для воды</h3>
+            <p class="equipment-list__text">Данную подставку можно использовать для бутыли 19 литров. Позволяет использовать её как дома, в офисе или&nbsp;любом помещении для удобного и&nbsp;грамотного размещения воды.</p>
+          </li>
+          <li class="equipment-list__item">
+            <div class="equipment-list__image-wrapper">
+              <img src="./img/equipment2.jpg" alt="Диспенсер" class="equipment-list__image" width="131" height="176">
+            </div>
+            <h3 class="equipment-list__title">Диспенсеры</h3>
+            <p class="equipment-list__text">Универсальный распределитель воды. Он способен нагревать до +98 и охлаждать до +10 всего за 20 минут, а&nbsp;так же поддерживать выбранную температуру в течении всего времени.</p>
+          </li>
+          <li class="equipment-list__item">
+            <div class="equipment-list__image-wrapper">
+              <img src="./img/equipment3.jpg" alt="Помпа" class="equipment-list__image" width="120" height="171">
+            </div>
+            <h3 class="equipment-list__title">Помпы</h3>
+            <p class="equipment-list__text">Электрическая или механическая помпа. Приспособление для накачки воды и может выступать в&nbsp;качестве упрощённой альтернативы диспенсеру.</p>
+          </li>
+        </ul>
+      </section>
 
     </main>
 </body>
