@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2068c9e1-8709-4c65-aaa9-54243214fde0&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
     <div class="column-header">
@@ -15,25 +17,7 @@
             <a class="main-header__logo">
               <img src="./img/logo.png" alt="Логотип" class="main-header__logo-image" width="114" height="35">
             </a>
-            <nav class="main-header__nav nav nav--close">
-              <button class="nav__button">
-                <span class="visually-hidden">Меню</span>
-              </button>
-              <ul class="main-header__nav-list nav-list">
-                <li class="nav-list__item">
-                  <a href="" class="nav-list__link">О компании</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="" class="nav-list__link">Напитки</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="" class="nav-list__link">Оборудование</a>
-                </li>
-                <li class="nav-list__item">
-                  <a href="" class="nav-list__link">Контакты</a>
-                </li>
-              </ul>
-            </nav>
+            <div id="nav"></div>
             <ul class="main-header__phones phones-list">
               <li class="phones-list__item">
                 <a href="tel:+77212381390" class="phones-list__link">+7 (7212) 38-13-90</a>
@@ -164,76 +148,14 @@
 
       <section class="water-order">
         <div class="water-order__container">
+          <h2 class="visually-hidden">Заказ воды</h2>
           <div class="water-order__container-right">
             <div class="water-order__title-wrapper">
-              <h2 class="water-order__title">заказать воду на дом или офис 19&nbsp;литров</h2>
+              <h3 class="water-order__title">заказать воду 19&nbsp;литров домой или в&nbsp;офис</h3>
               <p class="water-order__subtitle">Доставка воды: Караганда, Темиртау, Абай, Сарань, Шахтинск, Шахан, Актас</p>
             </div>
-            <div class="water-order__form-wrapper">
-              <form action="" class="water-order__form form-water">
-                <div class="form-water__group">
-                  <div class="form-water__input-wrapper form-water__input-wrapper--left">
-                    <label for="city" class="form-water__label">Город</label>
-                    <!-- <input id="city" type="text" name="city" class="form-water__input" placeholder="г.Караганда"> -->
-                    <select id="city" name="city" class="form-water__input form-water__input--select" size="1">
-                      <option value="Karaganda" selected>Караганда</option>
-                      <option value="Temirtau">Темиртау</option>
-                      <option value="Abay">Абай</option>
-                      <option value="Saran">Сарань</option>
-                      <option value="Shahtinsk">Шахтинск</option>
-                      <option value="Shahan">Шахан</option>
-                      <option value="Aktas">Актас</option>
-                    </select>
-                  </div>
-                  <div class="form-water__input-wrapper form-water__input-wrapper--right">
-                    <label for="address" class="form-water__label">Улица, дом</label>
-                    <input id="address" type="text" name="address" class="form-water__input" placeholder="ул.Абая 1, кв.1">
-                  </div>
-                </div>
-                <div class="form-water__group">
-                  <div class="form-water__input-wrapper form-water__input-wrapper--left">
-                    <label for="date" class="form-water__label">Дата поставки</label>
-                    <input id="date" type="date" name="date" class="form-water__input">
-                  </div>
-                  <div class="form-water__input-wrapper form-water__input-wrapper--right">
-                    <label for="phone" class="form-water__label">Телефон</label>
-                    <input id="phone" type="tel" name="phone" class="form-water__input" placeholder="+7(___)___-__-__">
-                  </div>
-                </div>
-                <div class="form-water__group form-water__group--quantity">
-                  <div class="form-water__input-wrapper form-water__input-wrapper--left">
-                    <p class="form-water__label">Кол-во шт.</p>
-                    <div class="form-water__button-quantity-wrapper">
-                      <button class="form-water__button-quantity form-water__button-quantity--minus" type="button">
-                        <span class="visually-hidden">минус</span>
-                      </button>
-                      <p class="form-water__quantity">1</p>
-                      <button class="form-water__button-quantity form-water__button-quantity--plus" type="button">
-                        <span class="visually-hidden">плюс</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="form-water__input-wrapper form-water__input-wrapper--right">
-                    <p class="form-water__label">Доп.оборудование</p>
-                    <div class="form-water__input-wrapper form-water__input-wrapper--equipment">
-                      <div class="form-water__input-wrapper-group">
-                        <input id="pompa" type="checkbox" name="pompa" class="form-water__input-equipment visually-hidden">
-                        <label for="pompa" class="form-water__label-equipment">Помпа</label>
-                      </div>
-                      <div class="form-water__input-wrapper-group">
-                        <input id="cooler" type="checkbox" name="cooler" class="form-water__input-equipment visually-hidden">
-                        <label for="cooler" class="form-water__label-equipment">Диспенсер</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-water__group form-water__group--total">
-                  <div class="form-water__total-wrapper">
-                    <p class="form-water__total">Итого:<span class="form-water__total-number">500 тг.</span></p>
-                  </div>
-                  <button class="form-water__button btn">Оформить заказ</button>
-                </div>
-              </form>
+            <div id="form" class="water-order__form-wrapper">
+
             </div>
           </div>
         </div>
@@ -273,7 +195,8 @@
         <h2 class="main-footer__title">Контактная информация</h2>
       </div>
         <div class="main-footer__map">
-          <img src="./img/map.jpg" alt="г. Караганда, ул. Гончарная 17" class="main-footer__image" width="1158" height="386">
+          <div id="map" class="main-footer__map-yandex" style="width: 100%; height: 360px"></div>
+          <img src="./img/map.jpg" alt="г. Караганда, ул. Гончарная 17" class="main-footer__map-image" width="1158" height="386">
         </div>
       <div class="main-footer__container">
         <div class="main-footer__contacts contacts-list">
@@ -314,25 +237,38 @@
               </li>
             </ul>
           </nav>
-          <p class="main-footer__copyright">©Copyright 2020</p>
+          <p class="main-footer__copyright">©Copyright 2021</p>
         </div>
       </div>
     </footer>
-</body>
 
-<script>
-  const nav = document.querySelector('.nav');
-  const button = nav.querySelector('.nav__button');
-
-  button.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    if (nav.classList.contains('nav--open')) {
-      nav.classList.remove('nav--open');
-      nav.classList.add('nav--close');
-    } else {
-      nav.classList.remove('nav--close');
-      nav.classList.add('nav--open');
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-input-mask/dist/react-input-mask.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_USER_ID");
+    })();
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [49.78191448, 73.10977348],
+            zoom: 17
+        });
+        myMap.behaviors
+          .disable(['drag', 'rightMouseButtonMagnifier'])
+          .enable('ruler');
+        myMap.balloon.open(myMap.getCenter(), {
+          contentHeader: '<span style="color: #323232">ТОО Waters Service</span>',
+          contentBody: '<span style="color: #636363">Артезианская природная вода</span>'
+});
     }
-  });
-</script>
+  </script>
+
+  <script src="./js/form.js"></script>
+  <script src="./js/nav.js"></script>
+</body>
 </html>
