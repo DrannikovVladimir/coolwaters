@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const gulpClean = require('gulp-clean');
+const gulpBabel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
 
 gulp.task('sass', () => gulp.src('src/sass/style.scss')
@@ -16,6 +17,14 @@ gulp.task('sass', () => gulp.src('src/sass/style.scss')
     autoprefixer(),
   ]))
   .pipe(gulp.dest('src/css'))
+  .pipe(browserSync.stream()));
+
+gulp.task('script', () => gulp.src('src/assets/**/*.js')
+  .pipe(gulpBabel({
+    presets: ['@babel/env', '@babel/react'],
+    plugins: ['@babel/proposal-class-properties'],
+  }))
+  .pipe(gulp.dest('src/js'))
   .pipe(browserSync.stream()));
 
 gulp.task('clean', () => {
@@ -33,6 +42,6 @@ gulp.task('server', () => browserSync.init({
 
 gulp.watch('src/sass/**/*.scss', gulp.series('sass')),
 gulp.watch('src/**/*.html').on('change', browserSync.reload),
-gulp.watch('src/js/**/*.js').on('change', browserSync.reload));
+gulp.watch('src/assets/**/*.js', gulp.series('script')));
 
-gulp.task('start', gulp.series('clean', 'sass', 'server'));
+gulp.task('start', gulp.series('clean', 'sass', 'script', 'server'));
