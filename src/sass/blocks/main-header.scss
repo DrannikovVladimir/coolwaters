@@ -1,6 +1,8 @@
+@use '../variables';
+
 .main-header {
   position: relative;
-  background-color: $bg-color;
+  background-color: variables.$bg-color;
 }
 
 .main-header__container {

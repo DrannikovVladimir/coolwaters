@@ -1,5 +1,7 @@
+@use '../variables';
+
 .water-order {
-  background-color: $bg-color;
+  background-color: variables.$bg-color;
   background-image: url('../../img/bg-main.png');
   background-repeat: no-repeat;
   background-position: left -400px center;
@@ -15,7 +17,7 @@
   padding-bottom: 120px;
   padding-left: 90px;
 
-  background-color: $bg-color;
+  background-color: variables.$bg-color;
   background-image: url('../../img/bottle-form.png');
   background-repeat: no-repeat;
   background-position: left 46% center;
@@ -42,7 +44,7 @@
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .water-order__subtitle {
@@ -76,7 +78,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
 
-    background-color: $bg-color;
+    background-color: variables.$bg-color;
     background-image: url('../../img/bottle-form.png');
     background-repeat: no-repeat;
     background-position: left 35% bottom 130px;

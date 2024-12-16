@@ -1,9 +1,11 @@
+@use '../variables';
+
 .main-footer {
   position: relative;
 
   padding-top: 160px;
 
-  background-color: $bg-color;
+  background-color: variables.$bg-color;
 
   &::before {
     content: '';
@@ -68,7 +70,7 @@
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .main-footer__nav {

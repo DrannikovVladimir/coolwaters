@@ -1,3 +1,5 @@
+@use '../variables';
+
 .contacts-list {
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +35,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .contacts-list__text {

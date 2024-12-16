@@ -1,3 +1,5 @@
+@use '../variables';
+
 .feedback-form {
   display: flex;
   flex-direction: column;
@@ -19,7 +21,7 @@
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  color: $title-color;
+  color: variables.$title-color;
 
   &::after {
     content: '';

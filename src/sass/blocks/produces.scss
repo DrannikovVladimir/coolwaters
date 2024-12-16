@@ -1,3 +1,5 @@
+@use '../variables';
+
 .produces__container {
   width: 1370px;
   margin: 0 auto;
@@ -18,7 +20,7 @@
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .produces__button-wrapper {

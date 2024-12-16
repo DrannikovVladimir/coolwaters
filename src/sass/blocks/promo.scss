@@ -1,5 +1,7 @@
+@use '../variables';
+
 .promo {
-  background-color: $bg-color;
+  background-color: variables.$bg-color;
   background-image: url('../../img/bottle.png');
   background-repeat: no-repeat;
   background-position: left 600px center;
@@ -33,7 +35,7 @@
   font-size: 40px;
   line-height: 52px;
   text-transform: uppercase;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .promo__subtitle {

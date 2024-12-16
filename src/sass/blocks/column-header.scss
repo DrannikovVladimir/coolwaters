@@ -1,5 +1,7 @@
+@use '../variables';
+
 .column-header {
-  background-color: $bg-color;
+  background-color: variables.$bg-color;
   background-image: url(../../img/bg-main.png);
   background-repeat: no-repeat;
   background-position: left -600px center;

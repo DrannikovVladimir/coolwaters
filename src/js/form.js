@@ -1,75 +1,46 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /* eslint-disable no-unused-vars */
-
 /* eslint-disable no-undef */
-
 /* eslint-disable quote-props */
 var Form = /*#__PURE__*/function (_React$Component) {
-  _inherits(Form, _React$Component);
-
-  var _super = _createSuper(Form);
-
   function Form(props) {
     var _this;
-
     _classCallCheck(this, Form);
-
-    _this = _super.call(this, props);
-
-    _defineProperty(_assertThisInitialized(_this), "formatedDate", function (date) {
+    _this = _callSuper(this, Form, [props]);
+    _defineProperty(_this, "formatedDate", function (date) {
       var day = date.getDate();
       var month = date.getMonth() < 10 ? "0".concat(date.getMonth() + 1) : date.getMonth();
       var year = date.getFullYear();
       return "".concat(year, "-").concat(month, "-").concat(day);
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeCity", function (_ref) {
+    _defineProperty(_this, "handleChangeCity", function (_ref) {
       var target = _ref.target;
       var _this$state = _this.state,
-          form = _this$state.form,
-          status = _this$state.status;
-
+        form = _this$state.form,
+        status = _this$state.status;
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -77,13 +48,11 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeAddress", function (_ref2) {
+    _defineProperty(_this, "handleChangeAddress", function (_ref2) {
       var target = _ref2.target;
       var _this$state2 = _this.state,
-          form = _this$state2.form,
-          status = _this$state2.status;
-
+        form = _this$state2.form,
+        status = _this$state2.status;
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -91,13 +60,11 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeDate", function (_ref3) {
+    _defineProperty(_this, "handleChangeDate", function (_ref3) {
       var target = _ref3.target;
       var _this$state3 = _this.state,
-          form = _this$state3.form,
-          status = _this$state3.status;
-
+        form = _this$state3.form,
+        status = _this$state3.status;
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -105,13 +72,11 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangePhone", function (_ref4) {
+    _defineProperty(_this, "handleChangePhone", function (_ref4) {
       var target = _ref4.target;
       var _this$state4 = _this.state,
-          form = _this$state4.form,
-          status = _this$state4.status;
-
+        form = _this$state4.form,
+        status = _this$state4.status;
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -119,13 +84,11 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeQuantityMinus", function () {
+    _defineProperty(_this, "handleChangeQuantityMinus", function () {
       var _this$state5 = _this.state,
-          form = _this$state5.form,
-          status = _this$state5.status;
+        form = _this$state5.form,
+        status = _this$state5.status;
       var quantity = form.quantity;
-
       if (quantity === 1) {
         _this.setState({
           status: status,
@@ -134,10 +97,8 @@ var Form = /*#__PURE__*/function (_React$Component) {
             price: 500
           })
         });
-
         return;
       }
-
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -146,13 +107,11 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeQuantityPlus", function () {
+    _defineProperty(_this, "handleChangeQuantityPlus", function () {
       var _this$state6 = _this.state,
-          form = _this$state6.form,
-          status = _this$state6.status;
+        form = _this$state6.form,
+        status = _this$state6.status;
       var quantity = form.quantity;
-
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -161,12 +120,10 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangePompa", function () {
+    _defineProperty(_this, "handleChangePompa", function () {
       var _this$state7 = _this.state,
-          form = _this$state7.form,
-          status = _this$state7.status;
-
+        form = _this$state7.form,
+        status = _this$state7.status;
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -174,12 +131,10 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeCooler", function () {
+    _defineProperty(_this, "handleChangeCooler", function () {
       var _this$state8 = _this.state,
-          form = _this$state8.form,
-          status = _this$state8.status;
-
+        form = _this$state8.form,
+        status = _this$state8.status;
       _this.setState({
         status: status,
         form: _objectSpread(_objectSpread({}, form), {}, {
@@ -187,8 +142,7 @@ var Form = /*#__PURE__*/function (_React$Component) {
         })
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "getCityName", function (city) {
+    _defineProperty(_this, "getCityName", function (city) {
       var cities = {
         'karaganda': 'Караганда',
         'temirtau': 'Темиртау',
@@ -200,8 +154,7 @@ var Form = /*#__PURE__*/function (_React$Component) {
       };
       return cities[city];
     });
-
-    _defineProperty(_assertThisInitialized(_this), "getFormattedDate", function () {
+    _defineProperty(_this, "getFormattedDate", function () {
       var months = {
         '01': 'Января',
         '02': 'Февраля',
@@ -218,47 +171,37 @@ var Form = /*#__PURE__*/function (_React$Component) {
       };
       var date = _this.state.form.date;
       var formatedDate = date.split('-').reverse();
-
       var _formatedDate = _slicedToArray(formatedDate, 3),
-          day = _formatedDate[0],
-          month = _formatedDate[1],
-          year = _formatedDate[2];
-
+        day = _formatedDate[0],
+        month = _formatedDate[1],
+        year = _formatedDate[2];
       return "".concat(day, " ").concat(months[month], " ").concat(year);
     });
-
-    _defineProperty(_assertThisInitialized(_this), "createObjectForSending", function () {
+    _defineProperty(_this, "createObjectForSending", function () {
       var form = _this.state.form;
       return Object.entries(form).reduce(function (acc, _ref5) {
         var _ref6 = _slicedToArray(_ref5, 2),
-            key = _ref6[0],
-            value = _ref6[1];
-
+          key = _ref6[0],
+          value = _ref6[1];
         if (value) {
           acc[key] = value;
-
           if (key === 'pompa') {
             acc[key] = 'Помпа';
           }
-
           if (key === 'cooler') {
             acc[key] = 'Диспенсер';
           }
-
           if (key === 'date') {
             acc[key] = _this.getFormattedDate();
           }
-
           if (key === 'city') {
             acc[key] = _this.getCityName(value);
           }
         }
-
         return acc;
       }, {});
     });
-
-    _defineProperty(_assertThisInitialized(_this), "handleSubmit", function (e) {
+    _defineProperty(_this, "handleSubmit", function (e) {
       e.preventDefault();
       _this.buttonRef.current.disabled = true;
       _this.cityRef.current.disabled = true;
@@ -267,37 +210,31 @@ var Form = /*#__PURE__*/function (_React$Component) {
       _this.phoneRef.disabled = true;
       _this.pompaRef.current.disabled = true;
       _this.coolerRef.current.disabled = true;
-
       var formData = _this.createObjectForSending();
-
       window.emailjs.send('service_xrtom7j', 'template_16wbtra', formData, 'user_3QIXDooOoykxAufDOyptx').then(function (result) {
         console.log(result.text);
-
         _this.setState({
           status: 'finished'
         });
-
         console.log(_this.state.status);
       }, function (error) {
         console.log(error.text);
-
         _this.setState({
           status: 'error'
         });
       });
       e.target.reset();
     });
-
-    _defineProperty(_assertThisInitialized(_this), "renderForm", function () {
+    _defineProperty(_this, "renderForm", function () {
       var _this$state$form = _this.state.form,
-          city = _this$state$form.city,
-          address = _this$state$form.address,
-          date = _this$state$form.date,
-          phone = _this$state$form.phone,
-          quantity = _this$state$form.quantity,
-          price = _this$state$form.price,
-          pompa = _this$state$form.pompa,
-          cooler = _this$state$form.cooler;
+        city = _this$state$form.city,
+        address = _this$state$form.address,
+        date = _this$state$form.date,
+        phone = _this$state$form.phone,
+        quantity = _this$state$form.quantity,
+        price = _this$state$form.price,
+        pompa = _this$state$form.pompa,
+        cooler = _this$state$form.cooler;
       return /*#__PURE__*/React.createElement("form", {
         onSubmit: _this.handleSubmit,
         className: "water-order__form form-water"
@@ -441,8 +378,7 @@ var Form = /*#__PURE__*/function (_React$Component) {
         ref: _this.buttonRef
       }, "\u041E\u0444\u043E\u0440\u043C\u0438\u0442\u044C \u0437\u0430\u043A\u0430\u0437")));
     });
-
-    _defineProperty(_assertThisInitialized(_this), "renderFeedback", function () {
+    _defineProperty(_this, "renderFeedback", function () {
       console.log('Render Feedback');
       return /*#__PURE__*/React.createElement("div", {
         className: "water-order__feedback feedback-form"
@@ -452,17 +388,14 @@ var Form = /*#__PURE__*/function (_React$Component) {
         className: "feedback-form__text"
       }, "\u041D\u0430\u0448 \u043C\u0435\u043D\u0435\u0434\u0436\u0435\u0440 \u0441\u0432\u044F\u0436\u0435\u0442\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u0432\xA0\u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0435\u0435 \u0432\u0440\u0435\u043C\u044F \u0438 \u0443\u0442\u043E\u0447\u043D\u0438\u0442 \u0432\u0441\u0435\xA0\u0434\u0435\u0442\u0430\u043B\u0438 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0438"));
     });
-
     _this.buttonRef = React.createRef();
     _this.cityRef = React.createRef();
     _this.addressRef = React.createRef();
     _this.dateRef = React.createRef();
     _this.phoneRef = null;
-
     _this.setPhoneRef = function (el) {
       _this.phoneRef = el;
     };
-
     _this.pompaRef = React.createRef();
     _this.coolerRef = React.createRef();
     _this.state = {
@@ -480,16 +413,13 @@ var Form = /*#__PURE__*/function (_React$Component) {
     };
     return _this;
   }
-
-  _createClass(Form, [{
+  _inherits(Form, _React$Component);
+  return _createClass(Form, [{
     key: "render",
     value: function render() {
       var status = this.state.status;
       return /*#__PURE__*/React.createElement(React.Fragment, null, status === 'filling' ? this.renderForm() : this.renderFeedback());
     }
   }]);
-
-  return Form;
 }(React.Component);
-
-ReactDOM.render( /*#__PURE__*/React.createElement(Form, null), document.querySelector('#form'));
+ReactDOM.render(/*#__PURE__*/React.createElement(Form, null), document.querySelector('#form'));

@@ -1,3 +1,5 @@
+@use '../variables';
+
 .about__container-title {
   display: flex;
   width: 1286px;
@@ -20,7 +22,7 @@
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .about__container-gallery {
@@ -38,10 +40,10 @@
 
 .about__link {
   display: inline-block;
-  border-bottom: 2px solid $button-color;
+  border-bottom: 2px solid variables.$button-color;
 
   font-weight: 600;
-  color: $button-color;
+  color: variables.$button-color;
 }
 
 @media (max-width: 1305px) {

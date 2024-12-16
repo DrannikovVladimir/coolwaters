@@ -1,3 +1,5 @@
+@use '../variables';
+
 .form-water__group {
   display: flex;
   margin-bottom: 40px;
@@ -46,7 +48,7 @@
     -moz-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    background-color: $basic-color;
+    background-color: variables.$basic-color;
     background-image: url('../../img/icon-select.svg');
     background-repeat: no-repeat;
     background-size: 10px auto;
@@ -67,7 +69,7 @@
 
   font-size: 25px;
   line-height: 41px;
-  color: $title-color;
+  color: variables.$title-color;
 }
 
 .form-water__button-quantity {
@@ -79,9 +81,9 @@
   border: 1px solid #636363;
   border-radius: 50%;
 
-  color: $button-color;
+  color: variables.$button-color;
 
-  background-color: $basic-color;
+  background-color: variables.$basic-color;
 
   &--minus {
 
@@ -128,7 +130,7 @@
     height: 18px;
     border: 1px solid #636363;
 
-    background-color: $basic-color;
+    background-color: variables.$basic-color;
   }
 }
 
@@ -146,7 +148,7 @@
 .form-water__input-equipment:focus + .form-water__label-equipment {
 
   &::before {
-    border: 2px solid $title-color;
+    border: 2px solid variables.$title-color;
   }
 }
 
@@ -165,7 +167,7 @@
 .form-water__total-number {
   display: block;
 
-  color: $title-color;
+  color: variables.$title-color;
   font-size: 18px;
   line-height: 29px;
 }

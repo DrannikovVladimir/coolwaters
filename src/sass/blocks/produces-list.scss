@@ -1,3 +1,5 @@
+@use '../variables';
+
 .produces-list {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +30,7 @@
 
   font-size: 20px;
   line-height: 28px;
-  color: $title-color;
+  color: variables.$title-color;
   font-weight: 600;
 }
 
